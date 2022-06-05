@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="1500.0" maxWidth="1500.0" minHeight="1500.0" minWidth="1500.0" prefHeight="1500.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <VBox prefHeight="106.0" prefWidth="600.0">
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #e4ff1f;" text="SCORE">
+                <HBox.margin>
+                    <Insets left="900.0" top="20.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Constantia Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="scoreLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #1e90ff;" text="0">
+                <HBox.margin>
+                    <Insets left="30.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="System Bold" size="50.0" />
+                </font>
+            </Label>
+        </HBox>
+        <TextArea fx:id="userInput" promptText="Type or click">
+            <VBox.margin>
+                <Insets bottom="20.0" left="80.0" right="80.0" top="50.0" />
+            </VBox.margin>
+        </TextArea>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </VBox>
+    <BorderPane prefHeight="325.0" prefWidth="676.0">
+        <right>
+            <TextArea fx:id="foundedWords" disable="true" editable="false" onDragDetected="#validation" prefHeight="210.0" prefWidth="224.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <font>
+               <Font size="27.0" />
+            </font></TextArea>
+        </right>
+        <bottom>
+            <ButtonBar prefHeight="50.0" prefWidth="329.0" BorderPane.alignment="BOTTOM_LEFT">
+                <buttons>
+                    <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#clrInput" text="SİL">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                    </Button>
+                    <Button fx:id="btnEnter" layoutX="449.0" layoutY="17.0" mnemonicParsing="false" onAction="#validation" text="GİR">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                    </Button>
+                </buttons>
+                <BorderPane.margin>
+                    <Insets bottom="50.0" right="300.0" />
+                </BorderPane.margin>
+            </ButtonBar>
+        </bottom>
+        <left>
+            <GridPane prefHeight="204.0" prefWidth="376.0" BorderPane.alignment="CENTER_RIGHT">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <StackPane>
+                    <GridPane.margin>
+                        <Insets left="150.0" top="50.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT_AREA" fill="DODGERBLUE" points="286.5999755859375, 111.2005386352539, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE" />
+               <Button  minHeight="-Infinity" mnemonicParsing="false" onAction="#clickA" prefHeight="35.0" style="-fx-background-color: #1e90ff;" text="A">
+                  <StackPane.margin>
+                     <Insets />
+                  </StackPane.margin>
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets left="210.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT_AREA" fill="DODGERBLUE" points="286.5999755859375, 111.39998626708984, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE" />
+               <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickB" prefHeight="35.0" style="-fx-background-color: #1e90ff;" text="B">
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="90.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT" fill="DODGERBLUE" points="286.5999755859375, 111.2005386352539, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE" styleClass="A">
+                        <StackPane.margin>
+                            <Insets right="20.0" />
+                        </StackPane.margin>
+                    </Polygon>
+               <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#clickS" prefHeight="35.0" style="-fx-background-color: #1e90ff;" text="S">
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+                  <StackPane.margin>
+                     <Insets right="17.0" />
+                  </StackPane.margin>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="9">
+                    <GridPane.margin>
+                        <Insets bottom="50.0" left="90.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT_AREA" fill="DODGERBLUE" points="286.5999755859375, 111.2005386352539, 312.7999267578125, 111.20045471191406, 334.99993896484375, 131.00045776367188, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE">
+                        <StackPane.margin>
+                            <Insets bottom="10.0" right="10.0" top="5.0" />
+                        </StackPane.margin>
+                    </Polygon>
+               <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#clickI" prefHeight="35.0" prefWidth="30.0" style="-fx-background-color: #1e90ff;" text="I">
+                  <font>
+                     <Font name="System Bold" size="20.0" />
+                  </font>
+                  <StackPane.margin>
+                     <Insets bottom="4.0" right="8.0" />
+                  </StackPane.margin>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="150.0" right="100.0" top="100.0" />
+                    </GridPane.margin>
+                    <Polygon id="lettercenter" fill="#e4ff1f" points="286.5999755859375, 111.2005386352539, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 269.1999206542969, 137.40000915527344" stroke="BLACK" strokeType="INSIDE">
+                  <StackPane.margin>
+                     <Insets bottom="3.0" left="4.0" right="2.0" />
+                  </StackPane.margin></Polygon>
+               <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#clickK" prefHeight="32.0" style="-fx-background-color: #e4ff1f;" text="K">
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="13">
+                    <GridPane.margin>
+                        <Insets bottom="280.0" left="210.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT_AREA" fill="DODGERBLUE" points="286.5999755859375, 111.2005386352539, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE">
+                        <StackPane.margin>
+                            <Insets bottom="10.0" right="10.0" top="6.0" />
+                        </StackPane.margin>
+                    </Polygon>
+               <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#clickE" prefHeight="35.0" style="-fx-background-color: #1e90ff;" text="E">
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+                  <StackPane.margin>
+                     <Insets bottom="10.0" right="8.0" />
+                  </StackPane.margin>
+               </Button>
+                </StackPane>
+                <StackPane GridPane.rowIndex="11">
+                    <GridPane.margin>
+                        <Insets bottom="45.0" left="152.0" />
+                    </GridPane.margin>
+                    <Polygon accessibleRole="TEXT_AREA" fill="DODGERBLUE" points="286.5999755859375, 111.2005386352539, 319.79998779296875, 111.39998626708984, 337.5999755859375, 137.40000915527344, 319.79998779296875, 158.6005401611328, 286.5999755859375, 158.6005401611328, 266.99993896484375, 137.40000915527344" stroke="BLACK" strokeType="INSIDE">
+                        <StackPane.margin>
+                            <Insets bottom="10.0" />
+                        </StackPane.margin>
+                    </Polygon>
+               <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#clickR" prefHeight="35.0" style="-fx-background-color: #1e90ff;" text="R">
+                  <font>
+                     <Font name="Constantia Bold" size="20.0" />
+                  </font>
+                  <StackPane.margin>
+                     <Insets bottom="12.0" />
+                  </StackPane.margin>
+               </Button>
+                </StackPane>
+            </GridPane>
+        </left>
+      <VBox.margin>
+         <Insets top="6.0" />
+      </VBox.margin>
+      <top>
+         <Label fx:id="counter" prefWidth="224.0" text="0 Kelime Buldunuz..." BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+               <Insets left="900.0" />
+            </BorderPane.margin>
+            <font>
+               <Font name="Constantia Bold" size="18.0" />
+            </font>
+         </Label>
+      </top>
+    </BorderPane>
+</VBox>
